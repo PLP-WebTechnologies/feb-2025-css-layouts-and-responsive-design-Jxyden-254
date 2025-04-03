@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff0095;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        /* Task List Styles */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .task-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .task {
+            background-color: #f500b8;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid #ddd;
+            width: 300px;
+        }
+
+        .task h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+            }
+            .nav-list li {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 1rem;
+            }
+            .task-list {
+                flex-direction: column;
+            }
+            .task {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Tasks</h1>
+        <div class="task-list">
+            <div class="task">
+                <h2>Task 1</h2>
+                <p>Task description</p>
+            </div>
+            <div class="task">
+                <h2>Task 2</h2>
+                <p>Task description</p>
+            </div>
+            <div class="task">
+                <h2>Task 3</h2>
+                <p>Task description</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
